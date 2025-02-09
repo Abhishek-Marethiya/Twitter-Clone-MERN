@@ -24,7 +24,7 @@ const Post = ({ post }) => {
 	const { mutate: deletePost, isPending: isDeleting } = useMutation({
 		mutationFn: async () => {
 			try {
-				const res = await fetch(`http://localhost:5000/api/posts/${post._id}`, {
+				const res = await fetch(`https://twitter-clone-mern-backend.vercel.app/api/posts/${post._id}`, {
 					method: "DELETE",
 					credentials: "include",
 				});
