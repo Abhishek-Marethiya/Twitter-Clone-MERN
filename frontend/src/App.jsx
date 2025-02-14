@@ -21,9 +21,9 @@ function App() {
         const res = await fetch("https://twitter-clone-mern-backend.vercel.app/api/auth/me", {
           method: "GET",
           headers: {
-            "Content-Type": "application/json",
+              "Content-Type": "application/json",
           },
-          credentials: "include",
+          credentials: "include", // ✅ Required to send cookies
         });
         const data = await res.json();
 

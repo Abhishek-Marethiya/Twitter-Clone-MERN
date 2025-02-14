@@ -22,12 +22,12 @@ const app=express();
 const PORT=process.env.SERVER_PORT || 3000;
 
 
-
+//  origin: ['http://localhost:3030', 'https://twitter-clone-mern-frontend-nu.vercel.app'],
 app.use(cors({
-    origin: ['http://localhost:3030', 'https://twitter-clone-mern-frontend-nu.vercel.app'],
+	origin: ['http://localhost:3030', 'https://twitter-clone-mern-frontend-nu.vercel.app'], 
     methods: ['GET', 'POST', 'PUT', 'DELETE'],
     allowedHeaders: ['Content-Type', 'Authorization'],
-    credentials: true,
+    credentials: true, // Required to send cookies
 }));
 // middlewares
 app.use(express.json({limit:"5mb"}));
