@@ -14,7 +14,7 @@ const NotificationPage = () => {
 		queryKey: ["notifications"],
 		queryFn: async () => {
 			try {
-				const res = await fetch("https://twitter-clone-mern-backend.vercel.app/api/notifications",{
+				const res = await fetch("http://localhost:5000/api/notifications",{
 					credentials: "include",
 				});
 				const data = await res.json();
@@ -29,7 +29,7 @@ const NotificationPage = () => {
 	const { mutate: deleteNotifications } = useMutation({
 		mutationFn: async () => {
 			try {
-				const res = await fetch("https://twitter-clone-mern-backend.vercel.app/api/notifications", {
+				const res = await fetch("http://localhost:5000/api/notifications", {
 					method: "DELETE",
 					credentials: "include",
 				});

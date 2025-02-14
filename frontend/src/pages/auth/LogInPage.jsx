@@ -26,12 +26,11 @@ const LogInPage = () => {
 		mutationFn: async ({ username, password }) => {
 			
 			try {
-				const res = await fetch("https://twitter-clone-mern-backend.vercel.app/api/auth/login", {
+				const res = await fetch("http://localhost:5000/api/auth/login", {
 					method: "POST",
 					headers: { "Content-Type": "application/json" },
 					body: JSON.stringify({ username, password }),
 					credentials: "include",
-					mode: "cors",
 				});
 
 				const data = await res.json();

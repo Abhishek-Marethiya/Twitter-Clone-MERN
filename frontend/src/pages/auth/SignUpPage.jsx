@@ -24,14 +24,13 @@ const queryClient = useQueryClient();
 	const { mutate, isError, isPending, error } = useMutation({
 		mutationFn: async (formData) => {
 			try {
-				const res = await fetch("https://twitter-clone-mern-backend.vercel.app/api/auth/signup", {
+				const res = await fetch("http://localhost:5000/api/auth/signup", {
 					method: "POST",
 					headers: {
 						"Content-Type": "application/json",
 					},
 					body: JSON.stringify(formData),
 					credentials: "include",
-					mode: "cors",
 				});
 
 				const data = await res.json();
@@ -61,7 +60,7 @@ const queryClient = useQueryClient();
 	// const handleSubmit =async (e) => {
 	// 	e.preventDefault();
 	// try {
-	// 	const response = await fetch("https://twitter-clone-mern-backend.vercel.app/api/auth/signup", {
+	// 	const response = await fetch("http://localhost:5000/api/auth/signup", {
 	// 		method: "POST",
 	// 		headers: {
 	// 			"Content-Type": "application/json",

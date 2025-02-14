@@ -38,7 +38,7 @@ const ProfilePage = () => {
 		queryKey: ["userProfile"],
 		queryFn: async () => {
 			try {
-				const res = await fetch(`https://twitter-clone-mern-backend.vercel.app/api/users/profile/${username}`,{
+				const res = await fetch(`http://localhost:5000/api/users/profile/${username}`,{
 					method: "GET",
 					credentials: "include",
 				});

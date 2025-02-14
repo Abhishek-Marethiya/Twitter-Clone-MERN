@@ -18,7 +18,7 @@ function App() {
     queryFn: async () => {
       try {
         // Make a request to the backend to fetch the authenticated user
-        const res = await fetch("https://twitter-clone-mern-backend.vercel.app/api/auth/me", {
+        const res = await fetch("http://localhost:5000/api/auth/me", {
           method: "GET",
           headers: {
             "Content-Type": "application/json",
