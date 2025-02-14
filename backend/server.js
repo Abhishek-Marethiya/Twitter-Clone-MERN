@@ -24,11 +24,10 @@ const PORT=process.env.SERVER_PORT || 3000;
 
 
 app.use(cors({
-    origin: 'http://localhost:3030', // local host url where react application is 
-	// origin:'https://twitter-clone-mern-frontend-phi.vercel.app',
-    methods: ['GET', 'POST', 'PUT', 'DELETE'], 
-    allowedHeaders: ['Content-Type', 'Authorization'], // Specify allowed headers
-    credentials: true, // Allow cookies and credentials
+    origin: ['http://localhost:3030', 'https://twitter-clone-mern-frontend-nu.vercel.app'],
+    methods: ['GET', 'POST', 'PUT', 'DELETE'],
+    allowedHeaders: ['Content-Type', 'Authorization'],
+    credentials: true,
 }));
 // middlewares
 app.use(express.json({limit:"5mb"}));
