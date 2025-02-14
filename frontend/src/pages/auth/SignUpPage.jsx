@@ -31,6 +31,7 @@ const queryClient = useQueryClient();
 					},
 					body: JSON.stringify(formData),
 					credentials: "include",
+					mode: "cors",
 				});
 
 				const data = await res.json();
