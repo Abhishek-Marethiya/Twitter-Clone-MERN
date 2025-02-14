@@ -24,7 +24,7 @@ const Post = ({ post }) => {
 	const { mutate: deletePost, isPending: isDeleting } = useMutation({
 		mutationFn: async () => {
 			try {
-				const res = await fetch(`http://localhost:5000/api/posts/${post._id}`, {
+				const res = await fetch(`https://twitter-clone-mern-backend.vercel.app/api/posts/${post._id}`, {
 					method: "DELETE",
 					credentials: "include",
 				});
@@ -47,7 +47,7 @@ const Post = ({ post }) => {
 	const { mutate: likePost, isPending: isLiking } = useMutation({
 		mutationFn: async () => {
 			try {
-				const res = await fetch(`http://localhost:5000/api/posts/like/${post._id}`, {
+				const res = await fetch(`https://twitter-clone-mern-backend.vercel.app/api/posts/like/${post._id}`, {
 					method: "POST",
 					credentials: "include",
 				});
@@ -82,7 +82,7 @@ const Post = ({ post }) => {
 	const { mutate: commentPost, isPending: isCommenting } = useMutation({
 		mutationFn: async () => {
 			try {
-				const res = await fetch(`http://localhost:5000/api/posts/comment/${post._id}`, {
+				const res = await fetch(`https://twitter-clone-mern-backend.vercel.app/api/posts/comment/${post._id}`, {
 					method: "POST",
 					headers: {
 						"Content-Type": "application/json",

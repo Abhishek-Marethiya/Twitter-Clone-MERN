@@ -13,7 +13,7 @@ const RightPanel = () => {
 		queryKey:["suggestedUsers"],
 		queryFn:async ()=>{
 			try {
-				const res=await fetch('http://localhost:5000/api/users/suggested',{
+				const res=await fetch('https://twitter-clone-mern-backend.vercel.app/api/users/suggested',{
 					method: "GET",
 					credentials: "include",
 				});

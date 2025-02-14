@@ -24,7 +24,7 @@ const PORT=process.env.SERVER_PORT || 3000;
 
 //  origin: ['http://localhost:3030', 'https://twitter-clone-mern-frontend-nu.vercel.app'],
 app.use(cors({
-	origin: ['http://localhost:3030', 'https://twitter-clone-mern-frontend-nu.vercel.app'], 
+	origin: 'https://twitter-clone-mern-frontend-nu.vercel.app', 
     methods: ['GET', 'POST', 'PUT', 'DELETE'],
     allowedHeaders: ['Content-Type', 'Authorization'],
     credentials: true, // Required to send cookies
